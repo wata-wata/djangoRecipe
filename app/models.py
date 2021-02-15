@@ -41,6 +41,7 @@ class SiteUserManager(UserManager):
 class SiteUser(AbstractUser):
     class Meta(object):
         db_table = "site_user"
+        verbose_name = "ユーザー"
         verbose_name_plural = _("ユーザー")
 
     username = models.CharField(_("username"), max_length=150, blank=True)
