@@ -2,7 +2,22 @@
  
 {% block content %}
 <h1>検索結果</h1>
-{% for i in result %}
-{{ i.recipeId }}
-{% endfor %}
+<div id="recipe_result">
+	{% for i in result %}
+		<a href="{{ i.recipeUrl }}">
+			<article class="article">
+				<figure>
+					<img src="{{ i.foodImageUrl }}">
+				</figure>
+				<div class="recipe-info">
+					<h2>{{ i.recipeTitle }}</h2>
+					<time class="article-date">{{ i.recipePublishday }}</time>
+					<br></br>
+					<p>調理時間目安:{{ i.recipeIndication }}</p>
+					<p>{{ i.recipeDescription }}</p>
+				</div>
+			</article>
+		</a>
+	{% endfor %}
+</div>
 {% endblock %}
