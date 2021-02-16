@@ -1,6 +1,8 @@
 {% extends "base.html" %}
  
 {% block content %}
+<h1>レシピ検索</h1>
+<p>下のボタンからレシピに使う食材を選択してください！</p>
 <form action={% url 'djangoRecipe:result' %} method="get">
 	<ul class="nav nav-tabs" role="tablist">
   		<li class="nav-item">
