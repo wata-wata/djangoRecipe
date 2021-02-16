@@ -57,7 +57,7 @@ class ResultView(View):
 				result.append(recipes[recipes_num["cat_rank"]][recipes_num["res_rank"]])
 			return render(request,'home/searchResult.html',{ "result":result })
 		else:
-			messages.warning(request,"最低1つ以上選択してください")
+			messages.error(request,"最低1つ以上選択してください")
 			return redirect('app:index')
 			
 		

@@ -130,6 +130,7 @@ MEDIA_URL = '/media/'
 #フラッシュメッセージ
 MESSAGE_TAGS = {
     messages.SUCCESS: 'alert alert-success',
+    messages.ERROR: 'alert alert-danger'
 }
 
 #ログイン画面
