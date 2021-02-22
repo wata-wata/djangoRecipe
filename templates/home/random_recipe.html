@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+ 
+{% block content %}
+<h1>ランダムレシピ</h1>
+<div id="recipe_result">
+  {% for i in data %}
+    <button class="recipe-btn" onclick="location.href='{{ i.recipeUrl }}'">
+      <article class="article">
+        <!-- レシピの画像 -->
+        <figure>
+          <img src="{{ i.foodImageUrl }}">
+        </figure>
+        <div class="recipe-info">
+          <!-- レシピのタイトル -->
+          <h2>{{ i.recipeTitle }}</h2>
+          <!-- レシピの投稿日時 -->
+          <time class="article-date">{{ i.recipePublishday }}</time>
+          <br></br>
+          <!-- 調理時間目安 -->
+          <p>調理時間目安:{{ i.recipeIndication }}</p>
+          <!-- レシピの説明 -->
+          <p>{{ i.recipeDescription }}</p>
+        </div>
+      </article>
+    </button>
+  {% endfor %}
+</div>
+{% endblock %}
