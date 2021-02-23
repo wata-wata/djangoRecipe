@@ -77,4 +77,11 @@ ul.image_list li .image_box {
 	text-align: left;
 }
 
-
+#reload {
+  color: #fff;
+  background: #5876a3;
+  padding: 10px 30px;
+  display: inline-block;
+  border-radius: 5px;
+  text-decoration: none;
+}

@@ -1,7 +1,8 @@
 {% extends "base.html" %}
  
 {% block content %}
-<h1>ランダムレシピ</h1>
+<h1 id="random_recipe">ランダムレシピ</h1>
+<a id="reload" href="{% url 'app:random' %}">更新</a>
 <div id="recipe_result">
   {% for i in data %}
     <button class="recipe-btn" onclick="location.href='{{ i.recipeUrl }}'">

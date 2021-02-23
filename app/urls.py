@@ -8,7 +8,7 @@ urlpatterns = [
     path("siteUser/register", views.SiteUserRegisterView.as_view(), name="site_user_register"),
     path("siteUser/profile", views.SiteUserProfileView.as_view(), name="site_user_profile"),
     # レシピ検索
-    path('',views.IndexView.as_view(),name='index'),
+    path('index',views.IndexView.as_view(),name='index'),
     # 結果表示
 	path('result',views.ResultView.as_view(),name='result'),
     # ランダムレシピ
